@@ -1,0 +1,8 @@
+/node_modules*
+*.tar
+*.zip
+*.sh
+/src*
+/.git*
+/docker-compose*
+*.tgz

@@ -1,0 +1,28 @@
+{
+  "extends": ["eslint-config-ali/react", "prettier"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@babel/eslint-parser",
+  // "plugins": ["decorators"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "map": [["@", "./src"]]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "extends": ["eslint-config-ali/typescript/react", "prettier"]
+    }
+  ],
+  "rules": {
+    "import/no-unresolved": [2, { "ignore": ["^umi$"] }]
+  }
+}
