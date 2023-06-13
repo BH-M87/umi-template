@@ -1,4 +1,4 @@
-import 'umi/typings';
+import 'src/.umi/typings';
 
 declare namespace global {
   /** 定义一个任意类型的函数声明 */
