@@ -15,9 +15,9 @@ export default defineConfig({
   proxy: getProxy(PROXY_CONFIG),
   favicons: [`${publicPath}static/defaultLogo.png`],
   lessLoader: { math: 'always' },
-  cssLoader: {
-    modules: { localIdentName: '[local]' },
-  },
+  // cssLoader: {
+  //   modules: { localIdentName: '[local]' }, // 这么配置就没有hash了，注释掉默认开启css modules
+  // },
   targets: { chrome: 60 },
   chainWebpack(config: any) {
     config.resolve.modules.add(resolve(__dirname, '../src'));
